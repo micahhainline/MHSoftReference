@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6313C8BF8860D34C12E8BACA /* MHSoftMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313CD59D3700CD4D7279D80 /* MHSoftMutableArray.m */; };
+		6313C96BFCD0539D52BD7EC8 /* MHSoftMutableArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313C7BB288407C7264C23F2 /* MHSoftMutableArrayTest.m */; };
 		7541AAA718BFA9F600CC322B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7541AAA618BFA9F600CC322B /* Foundation.framework */; };
 		7541AAAC18BFA9F600CC322B /* MHSoftReference.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7541AAAB18BFA9F600CC322B /* MHSoftReference.h */; };
 		7541AAAE18BFA9F600CC322B /* MHSoftReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 7541AAAD18BFA9F600CC322B /* MHSoftReference.m */; };
@@ -15,7 +17,7 @@
 		7541AAB818BFA9F700CC322B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7541AAB718BFA9F700CC322B /* UIKit.framework */; };
 		7541AABB18BFA9F700CC322B /* libMHSoftReference.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7541AAA318BFA9F600CC322B /* libMHSoftReference.a */; };
 		7541AAC118BFA9F700CC322B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7541AABF18BFA9F700CC322B /* InfoPlist.strings */; };
-		7541AAC318BFA9F700CC322B /* MHSoftReferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7541AAC218BFA9F700CC322B /* MHSoftReferenceTests.m */; };
+		7541AAC318BFA9F700CC322B /* MHSoftReferenceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7541AAC218BFA9F700CC322B /* MHSoftReferenceTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6313C44113804C8E3114FF86 /* MHSoftReferenceTestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSoftReferenceTestUtils.h; sourceTree = "<group>"; };
+		6313C45B018C7AA840EB48E4 /* MHSoftReferencePrivateConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSoftReferencePrivateConstants.h; sourceTree = "<group>"; };
+		6313C695B523827D458A4AF3 /* MHSoftMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSoftMutableArray.h; sourceTree = "<group>"; };
+		6313C7BB288407C7264C23F2 /* MHSoftMutableArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSoftMutableArrayTest.m; sourceTree = "<group>"; };
+		6313CD59D3700CD4D7279D80 /* MHSoftMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSoftMutableArray.m; sourceTree = "<group>"; };
 		7541AAA318BFA9F600CC322B /* libMHSoftReference.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMHSoftReference.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7541AAA618BFA9F600CC322B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7541AAAA18BFA9F600CC322B /* MHSoftReference-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MHSoftReference-Prefix.pch"; sourceTree = "<group>"; };
@@ -52,7 +59,7 @@
 		7541AAB718BFA9F700CC322B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		7541AABE18BFA9F700CC322B /* MHSoftReferenceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MHSoftReferenceTests-Info.plist"; sourceTree = "<group>"; };
 		7541AAC018BFA9F700CC322B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7541AAC218BFA9F700CC322B /* MHSoftReferenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHSoftReferenceTests.m; sourceTree = "<group>"; };
+		7541AAC218BFA9F700CC322B /* MHSoftReferenceTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHSoftReferenceTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +120,9 @@
 				7541AAAB18BFA9F600CC322B /* MHSoftReference.h */,
 				7541AAAD18BFA9F600CC322B /* MHSoftReference.m */,
 				7541AAA918BFA9F600CC322B /* Supporting Files */,
+				6313CD59D3700CD4D7279D80 /* MHSoftMutableArray.m */,
+				6313C695B523827D458A4AF3 /* MHSoftMutableArray.h */,
+				6313C45B018C7AA840EB48E4 /* MHSoftReferencePrivateConstants.h */,
 			);
 			path = MHSoftReference;
 			sourceTree = "<group>";
@@ -128,8 +138,10 @@
 		7541AABC18BFA9F700CC322B /* MHSoftReferenceTests */ = {
 			isa = PBXGroup;
 			children = (
-				7541AAC218BFA9F700CC322B /* MHSoftReferenceTests.m */,
+				7541AAC218BFA9F700CC322B /* MHSoftReferenceTest.m */,
 				7541AABD18BFA9F700CC322B /* Supporting Files */,
+				6313C7BB288407C7264C23F2 /* MHSoftMutableArrayTest.m */,
+				6313C44113804C8E3114FF86 /* MHSoftReferenceTestUtils.h */,
 			);
 			path = MHSoftReferenceTests;
 			sourceTree = "<group>";
@@ -225,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7541AAAE18BFA9F600CC322B /* MHSoftReference.m in Sources */,
+				6313C8BF8860D34C12E8BACA /* MHSoftMutableArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +245,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7541AAC318BFA9F700CC322B /* MHSoftReferenceTests.m in Sources */,
+				7541AAC318BFA9F700CC322B /* MHSoftReferenceTest.m in Sources */,
+				6313C96BFCD0539D52BD7EC8 /* MHSoftMutableArrayTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

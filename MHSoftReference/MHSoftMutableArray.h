@@ -23,15 +23,8 @@
 
 // The latest version of this file can always be found at https://github.com/micahhainline/MHSoftReference
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+@interface MHSoftMutableArray : NSMutableArray
 
-@interface MHSoftReference : NSObject
-
-@property (nonatomic, readonly) id value;
-
-+ (MHSoftReference *)reference:(id)value;
-
-- (instancetype)init UNAVAILABLE_ATTRIBUTE;
+- (instancetype)initWithCapacity:(NSUInteger)numItems;
 
 @end

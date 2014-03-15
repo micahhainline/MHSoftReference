@@ -25,12 +25,9 @@
 
 #import <XCTest/XCTest.h>
 #import "MHSoftReference.h"
+#import "MHSoftReferenceTestUtils.h"
 
-#define MHSafeAssertNotNil(a1) @autoreleasepool { XCTAssertNotNil(a1, @""); }
-#define MHSafeAssertNil(a1) @autoreleasepool { XCTAssertNil(a1, @""); }
-#define MHSafeAssertEqualObjects(a1, a2) @autoreleasepool { XCTAssertEqualObjects(a1, a2, @""); }
-
-@interface MHSoftReferenceTests : XCTestCase {
+@interface MHSoftReferenceTest : XCTestCase {
     __strong NSObject *strong1;
     __weak NSObject *weak1;
     __strong NSObject *strong2;
@@ -40,7 +37,7 @@
 @end
 
 
-@implementation MHSoftReferenceTests
+@implementation MHSoftReferenceTest
 
 - (void)setUp {
     [super setUp];
@@ -51,7 +48,7 @@
 }
 
 - (void)testWhenNoLowMemoryBlockIsSentThenMemoryIsRetained {
-    MHSoftReference *soft = [MHSoftReference softReference:strong1];
+    MHSoftReference *soft = [MHSoftReference reference:strong1];
     strong1 = nil;
     
     MHSafeAssertNotNil(weak1);
@@ -59,7 +56,7 @@
 }
 
 - (void)testWhenHardReferenceExistsAndLowMemoryThenValueIsRetained {
-    MHSoftReference *soft = [MHSoftReference softReference:strong1];
+    MHSoftReference *soft = [MHSoftReference reference:strong1];
     
     [self fireLowMemory];
     
@@ -67,7 +64,7 @@
 }
 
 - (void)testWhenSingleSoftReferenceExistsANoStrongReferenceExistAndLowMemoryThenValueIsReleased {
-    MHSoftReference *soft = [MHSoftReference softReference:strong1];
+    MHSoftReference *soft = [MHSoftReference reference:strong1];
     strong1 = nil;
     
     [self fireLowMemory];
@@ -77,8 +74,8 @@
 }
 
 - (void)testWhenSoftReferencesExistToDifferentObjectsAndLowMemoryThenAllObjectsAreCleared {
-    MHSoftReference *soft1 = [MHSoftReference softReference:strong1];
-    MHSoftReference *soft2 = [MHSoftReference softReference:strong2];
+    MHSoftReference *soft1 = [MHSoftReference reference:strong1];
+    MHSoftReference *soft2 = [MHSoftReference reference:strong2];
     strong1 = nil;
     strong2 = nil;
     
@@ -96,8 +93,8 @@
 }
 
 - (void)testWhenTwoSoftReferencesExistToTheSameObjectAndLowMemoryThenObjectIsCleared {
-    MHSoftReference *soft1 = [MHSoftReference softReference:strong1];
-    MHSoftReference *soft2 = [MHSoftReference softReference:strong1];
+    MHSoftReference *soft1 = [MHSoftReference reference:strong1];
+    MHSoftReference *soft2 = [MHSoftReference reference:strong1];
     strong1 = nil;
     
     [self fireLowMemory];

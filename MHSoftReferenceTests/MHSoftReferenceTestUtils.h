@@ -23,15 +23,6 @@
 
 // The latest version of this file can always be found at https://github.com/micahhainline/MHSoftReference
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
-@interface MHSoftReference : NSObject
-
-@property (nonatomic, readonly) id value;
-
-+ (MHSoftReference *)reference:(id)value;
-
-- (instancetype)init UNAVAILABLE_ATTRIBUTE;
-
-@end
+#define MHSafeAssertNotNil(a1) @autoreleasepool { XCTAssertNotNil(a1, @""); }
+#define MHSafeAssertNil(a1) @autoreleasepool { XCTAssertNil(a1, @""); }
+#define MHSafeAssertEqualObjects(a1, a2) @autoreleasepool { XCTAssertEqualObjects(a1, a2, @""); }

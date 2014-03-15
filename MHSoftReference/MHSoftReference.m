@@ -24,8 +24,7 @@
 // The latest version of this file can always be found at https://github.com/micahhainline/MHSoftReference
 
 #import "MHSoftReference.h"
-
-#define MHSoftReferenceLowMemoryWeakConversionComplete @"MHSoftReferenceLowMemoryWeakConversionComplete"
+#import "MHSoftReferencePrivateConstants.h"
 
 @interface MHSoftReference() {
     __weak id weakValue;
@@ -39,7 +38,7 @@
 static int softReferenceCount = 0;
 static int softReferenceWeakConversionCount = 0;
 
-+ (MHSoftReference *)softReference:(id)value {
++ (MHSoftReference *)reference:(id)value {
     return [[MHSoftReference alloc] initWithValue:value];
 }
 
