@@ -1,0 +1,3 @@
+@interface MHSoftMutableDictionary : NSMutableDictionary
+
+@end

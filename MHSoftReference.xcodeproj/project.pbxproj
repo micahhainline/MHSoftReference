@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6313C4972F92B40E55DC7B14 /* MHSoftMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313CEB97AEEB8D163AC138F /* MHSoftMutableDictionary.m */; };
 		6313C8BF8860D34C12E8BACA /* MHSoftMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313CD59D3700CD4D7279D80 /* MHSoftMutableArray.m */; };
 		6313C96BFCD0539D52BD7EC8 /* MHSoftMutableArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313C7BB288407C7264C23F2 /* MHSoftMutableArrayTest.m */; };
+		6313CB3B6EE0E251009AA43D /* MHSoftMutableDictionaryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313C8C0D20771BDE74F4B60 /* MHSoftMutableDictionaryTest.m */; };
 		7541AAA718BFA9F600CC322B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7541AAA618BFA9F600CC322B /* Foundation.framework */; };
 		7541AAAC18BFA9F600CC322B /* MHSoftReference.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7541AAAB18BFA9F600CC322B /* MHSoftReference.h */; };
 		7541AAAE18BFA9F600CC322B /* MHSoftReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 7541AAAD18BFA9F600CC322B /* MHSoftReference.m */; };
@@ -45,10 +47,13 @@
 
 /* Begin PBXFileReference section */
 		6313C44113804C8E3114FF86 /* MHSoftReferenceTestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSoftReferenceTestUtils.h; sourceTree = "<group>"; };
+		6313C45A5BF6A037FBCDCB4B /* MHSoftMutableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSoftMutableDictionary.h; sourceTree = "<group>"; };
 		6313C45B018C7AA840EB48E4 /* MHSoftReferencePrivateConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSoftReferencePrivateConstants.h; sourceTree = "<group>"; };
 		6313C695B523827D458A4AF3 /* MHSoftMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSoftMutableArray.h; sourceTree = "<group>"; };
 		6313C7BB288407C7264C23F2 /* MHSoftMutableArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSoftMutableArrayTest.m; sourceTree = "<group>"; };
+		6313C8C0D20771BDE74F4B60 /* MHSoftMutableDictionaryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSoftMutableDictionaryTest.m; sourceTree = "<group>"; };
 		6313CD59D3700CD4D7279D80 /* MHSoftMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSoftMutableArray.m; sourceTree = "<group>"; };
+		6313CEB97AEEB8D163AC138F /* MHSoftMutableDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSoftMutableDictionary.m; sourceTree = "<group>"; };
 		7541AAA318BFA9F600CC322B /* libMHSoftReference.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMHSoftReference.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7541AAA618BFA9F600CC322B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7541AAAA18BFA9F600CC322B /* MHSoftReference-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MHSoftReference-Prefix.pch"; sourceTree = "<group>"; };
@@ -123,6 +128,8 @@
 				6313CD59D3700CD4D7279D80 /* MHSoftMutableArray.m */,
 				6313C695B523827D458A4AF3 /* MHSoftMutableArray.h */,
 				6313C45B018C7AA840EB48E4 /* MHSoftReferencePrivateConstants.h */,
+				6313CEB97AEEB8D163AC138F /* MHSoftMutableDictionary.m */,
+				6313C45A5BF6A037FBCDCB4B /* MHSoftMutableDictionary.h */,
 			);
 			path = MHSoftReference;
 			sourceTree = "<group>";
@@ -142,6 +149,7 @@
 				7541AABD18BFA9F700CC322B /* Supporting Files */,
 				6313C7BB288407C7264C23F2 /* MHSoftMutableArrayTest.m */,
 				6313C44113804C8E3114FF86 /* MHSoftReferenceTestUtils.h */,
+				6313C8C0D20771BDE74F4B60 /* MHSoftMutableDictionaryTest.m */,
 			);
 			path = MHSoftReferenceTests;
 			sourceTree = "<group>";
@@ -238,6 +246,7 @@
 			files = (
 				7541AAAE18BFA9F600CC322B /* MHSoftReference.m in Sources */,
 				6313C8BF8860D34C12E8BACA /* MHSoftMutableArray.m in Sources */,
+				6313C4972F92B40E55DC7B14 /* MHSoftMutableDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +256,7 @@
 			files = (
 				7541AAC318BFA9F700CC322B /* MHSoftReferenceTest.m in Sources */,
 				6313C96BFCD0539D52BD7EC8 /* MHSoftMutableArrayTest.m in Sources */,
+				6313CB3B6EE0E251009AA43D /* MHSoftMutableDictionaryTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
