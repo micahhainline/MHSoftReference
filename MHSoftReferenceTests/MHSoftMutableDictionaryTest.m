@@ -57,7 +57,17 @@
     MHSoftMutableDictionary *testObject = [MHSoftMutableDictionary dictionary];
     testObject[@"A"] = strong1;
     testObject[@"B"] = strong2;
+    
+    XCTAssertEqual(testObject.count, 2u);
+    MHSafeAssertEqualObjects(testObject[@"A"], strong1);
+    MHSafeAssertEqualObjects(testObject[@"B"], strong2);
+}
 
+- (void)testWhenDictionaryHasObjectsAddedThenTheyCanBeRetrievedIfObjectIsInitializedUsingInit {
+    MHSoftMutableDictionary *testObject = [[MHSoftMutableDictionary alloc] init];
+    testObject[@"A"] = strong1;
+    testObject[@"B"] = strong2;
+    
     XCTAssertEqual(testObject.count, 2u);
     MHSafeAssertEqualObjects(testObject[@"A"], strong1);
     MHSafeAssertEqualObjects(testObject[@"B"], strong2);

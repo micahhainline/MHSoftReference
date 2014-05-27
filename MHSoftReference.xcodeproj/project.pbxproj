@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AAD591D19351A6C00771226 /* MHSoftMutableArray.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6313C695B523827D458A4AF3 /* MHSoftMutableArray.h */; };
+		5AAD591E19351A6C00771226 /* MHSoftMutableDictionary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6313C45A5BF6A037FBCDCB4B /* MHSoftMutableDictionary.h */; };
 		6313C4972F92B40E55DC7B14 /* MHSoftMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313CEB97AEEB8D163AC138F /* MHSoftMutableDictionary.m */; };
 		6313C8BF8860D34C12E8BACA /* MHSoftMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313CD59D3700CD4D7279D80 /* MHSoftMutableArray.m */; };
 		6313C96BFCD0539D52BD7EC8 /* MHSoftMutableArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313C7BB288407C7264C23F2 /* MHSoftMutableArrayTest.m */; };
@@ -39,6 +41,8 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				5AAD591D19351A6C00771226 /* MHSoftMutableArray.h in CopyFiles */,
+				5AAD591E19351A6C00771226 /* MHSoftMutableDictionary.h in CopyFiles */,
 				7541AAAC18BFA9F600CC322B /* MHSoftReference.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,14 +126,14 @@
 		7541AAA818BFA9F600CC322B /* MHSoftReference */ = {
 			isa = PBXGroup;
 			children = (
+				6313C695B523827D458A4AF3 /* MHSoftMutableArray.h */,
+				6313CD59D3700CD4D7279D80 /* MHSoftMutableArray.m */,
+				6313C45A5BF6A037FBCDCB4B /* MHSoftMutableDictionary.h */,
+				6313CEB97AEEB8D163AC138F /* MHSoftMutableDictionary.m */,
 				7541AAAB18BFA9F600CC322B /* MHSoftReference.h */,
 				7541AAAD18BFA9F600CC322B /* MHSoftReference.m */,
-				7541AAA918BFA9F600CC322B /* Supporting Files */,
-				6313CD59D3700CD4D7279D80 /* MHSoftMutableArray.m */,
-				6313C695B523827D458A4AF3 /* MHSoftMutableArray.h */,
 				6313C45B018C7AA840EB48E4 /* MHSoftReferencePrivateConstants.h */,
-				6313CEB97AEEB8D163AC138F /* MHSoftMutableDictionary.m */,
-				6313C45A5BF6A037FBCDCB4B /* MHSoftMutableDictionary.h */,
+				7541AAA918BFA9F600CC322B /* Supporting Files */,
 			);
 			path = MHSoftReference;
 			sourceTree = "<group>";
@@ -207,7 +211,7 @@
 		7541AA9B18BFA9F600CC322B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Micah Hainline";
 			};
 			buildConfigurationList = 7541AA9E18BFA9F600CC322B /* Build configuration list for PBXProject "MHSoftReference" */;
@@ -286,7 +290,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -324,7 +327,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -379,7 +381,6 @@
 		7541AACA18BFA9F700CC322B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -400,7 +401,6 @@
 		7541AACB18BFA9F700CC322B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -433,6 +433,7 @@
 				7541AAC818BFA9F700CC322B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7541AAC918BFA9F700CC322B /* Build configuration list for PBXNativeTarget "MHSoftReferenceTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +442,7 @@
 				7541AACB18BFA9F700CC322B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
