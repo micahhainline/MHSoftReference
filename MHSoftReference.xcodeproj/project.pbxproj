@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5AAD591D19351A6C00771226 /* MHSoftMutableArray.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6313C695B523827D458A4AF3 /* MHSoftMutableArray.h */; };
 		5AAD591E19351A6C00771226 /* MHSoftMutableDictionary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6313C45A5BF6A037FBCDCB4B /* MHSoftMutableDictionary.h */; };
+		5AD715541936425E000E703A /* MHSoftMutableThreadSafeDictionaryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD715531936425E000E703A /* MHSoftMutableThreadSafeDictionaryTest.m */; };
+		5AD7155719364324000E703A /* MHSoftMutableThreadSafeDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD7155619364324000E703A /* MHSoftMutableThreadSafeDictionary.m */; };
+		5AD7155919366A34000E703A /* MHSoftMutableThreadSafeDictionary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5AD7155519364324000E703A /* MHSoftMutableThreadSafeDictionary.h */; };
 		6313C4972F92B40E55DC7B14 /* MHSoftMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313CEB97AEEB8D163AC138F /* MHSoftMutableDictionary.m */; };
 		6313C8BF8860D34C12E8BACA /* MHSoftMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313CD59D3700CD4D7279D80 /* MHSoftMutableArray.m */; };
 		6313C96BFCD0539D52BD7EC8 /* MHSoftMutableArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313C7BB288407C7264C23F2 /* MHSoftMutableArrayTest.m */; };
@@ -41,6 +44,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				5AD7155919366A34000E703A /* MHSoftMutableThreadSafeDictionary.h in CopyFiles */,
 				5AAD591D19351A6C00771226 /* MHSoftMutableArray.h in CopyFiles */,
 				5AAD591E19351A6C00771226 /* MHSoftMutableDictionary.h in CopyFiles */,
 				7541AAAC18BFA9F600CC322B /* MHSoftReference.h in CopyFiles */,
@@ -50,6 +54,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5AD715531936425E000E703A /* MHSoftMutableThreadSafeDictionaryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSoftMutableThreadSafeDictionaryTest.m; sourceTree = "<group>"; };
+		5AD7155519364324000E703A /* MHSoftMutableThreadSafeDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSoftMutableThreadSafeDictionary.h; sourceTree = "<group>"; };
+		5AD7155619364324000E703A /* MHSoftMutableThreadSafeDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSoftMutableThreadSafeDictionary.m; sourceTree = "<group>"; };
+		5AD71558193644EF000E703A /* MHSoftMutableDictionaryTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSoftMutableDictionaryTest.h; sourceTree = "<group>"; };
 		6313C44113804C8E3114FF86 /* MHSoftReferenceTestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSoftReferenceTestUtils.h; sourceTree = "<group>"; };
 		6313C45A5BF6A037FBCDCB4B /* MHSoftMutableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSoftMutableDictionary.h; sourceTree = "<group>"; };
 		6313C45B018C7AA840EB48E4 /* MHSoftReferencePrivateConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSoftReferencePrivateConstants.h; sourceTree = "<group>"; };
@@ -134,6 +142,8 @@
 				7541AAAD18BFA9F600CC322B /* MHSoftReference.m */,
 				6313C45B018C7AA840EB48E4 /* MHSoftReferencePrivateConstants.h */,
 				7541AAA918BFA9F600CC322B /* Supporting Files */,
+				5AD7155519364324000E703A /* MHSoftMutableThreadSafeDictionary.h */,
+				5AD7155619364324000E703A /* MHSoftMutableThreadSafeDictionary.m */,
 			);
 			path = MHSoftReference;
 			sourceTree = "<group>";
@@ -153,7 +163,9 @@
 				7541AABD18BFA9F700CC322B /* Supporting Files */,
 				6313C7BB288407C7264C23F2 /* MHSoftMutableArrayTest.m */,
 				6313C44113804C8E3114FF86 /* MHSoftReferenceTestUtils.h */,
+				5AD71558193644EF000E703A /* MHSoftMutableDictionaryTest.h */,
 				6313C8C0D20771BDE74F4B60 /* MHSoftMutableDictionaryTest.m */,
+				5AD715531936425E000E703A /* MHSoftMutableThreadSafeDictionaryTest.m */,
 			);
 			path = MHSoftReferenceTests;
 			sourceTree = "<group>";
@@ -250,6 +262,7 @@
 			files = (
 				7541AAAE18BFA9F600CC322B /* MHSoftReference.m in Sources */,
 				6313C8BF8860D34C12E8BACA /* MHSoftMutableArray.m in Sources */,
+				5AD7155719364324000E703A /* MHSoftMutableThreadSafeDictionary.m in Sources */,
 				6313C4972F92B40E55DC7B14 /* MHSoftMutableDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +273,7 @@
 			files = (
 				7541AAC318BFA9F700CC322B /* MHSoftReferenceTest.m in Sources */,
 				6313C96BFCD0539D52BD7EC8 /* MHSoftMutableArrayTest.m in Sources */,
+				5AD715541936425E000E703A /* MHSoftMutableThreadSafeDictionaryTest.m in Sources */,
 				6313CB3B6EE0E251009AA43D /* MHSoftMutableDictionaryTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
