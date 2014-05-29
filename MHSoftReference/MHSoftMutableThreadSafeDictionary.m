@@ -70,8 +70,6 @@
 }
 
 - (void)setObject:(id)anObject forKey:(id<NSCopying>)aKey {
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    dict[aKey] = anObject;
     dispatch_barrier_async(self.isolationQueue, ^{
         self.dictionary[aKey] = [MHSoftReference reference:anObject];
     });
