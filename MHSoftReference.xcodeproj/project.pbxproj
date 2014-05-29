@@ -438,7 +438,7 @@
 				7541AAC518BFA9F700CC322B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		7541AAC618BFA9F700CC322B /* Build configuration list for PBXNativeTarget "MHSoftReference" */ = {
 			isa = XCConfigurationList;
@@ -447,7 +447,7 @@
 				7541AAC818BFA9F700CC322B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		7541AAC918BFA9F700CC322B /* Build configuration list for PBXNativeTarget "MHSoftReferenceTests" */ = {
 			isa = XCConfigurationList;
@@ -456,7 +456,7 @@
 				7541AACB18BFA9F700CC322B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
