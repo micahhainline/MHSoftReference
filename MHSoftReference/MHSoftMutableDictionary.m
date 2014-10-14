@@ -10,6 +10,10 @@
 
 @implementation MHSoftMutableDictionary
 
+- (id)init {
+    return [self initWithObjectsAndKeys:nil];
+}
+
 - (instancetype)initWithCapacity:(NSUInteger)numItems {
     self = [super init];
     _dictionary = [[NSMutableDictionary alloc] initWithCapacity:numItems];

@@ -23,25 +23,13 @@
 
 // The latest version of this file can always be found at https://github.com/micahhainline/MHSoftReference
 
-#import <XCTest/XCTest.h>
-#import <UIKit/UIKit.h>
-#import "MHSoftMutableArray.h"
-#import "MHSoftReferenceTestUtils.h"
-#import "MHSoftMutableDictionary.h"
-
-@interface MHSoftMutableDictionaryTest : XCTestCase {
-    __strong NSObject *strong1;
-    __weak NSObject *weak1;
-    __strong NSObject *strong2;
-    __weak NSObject *weak2;
-    __strong NSObject *strong3;
-    __weak NSObject *weak3;
-}
-
-@end
-
+#import "MHSoftMutableDictionaryTest.h"
 
 @implementation MHSoftMutableDictionaryTest
+
+- (Class)classUnderTest {
+    return MHSoftMutableDictionary.class;
+}
 
 - (void)setUp {
     [super setUp];
@@ -54,17 +42,27 @@
 }
 
 - (void)testWhenDictionaryHasObjectsAddedThenTheyCanBeRetrieved {
-    MHSoftMutableDictionary *testObject = [MHSoftMutableDictionary dictionary];
+    MHSoftMutableDictionary *testObject = [self.classUnderTest dictionary];
     testObject[@"A"] = strong1;
     testObject[@"B"] = strong2;
+    
+    XCTAssertEqual(testObject.count, 2u);
+    MHSafeAssertEqualObjects(testObject[@"A"], strong1);
+    MHSafeAssertEqualObjects(testObject[@"B"], strong2);
+}
 
+- (void)testWhenDictionaryHasObjectsAddedThenTheyCanBeRetrievedIfObjectIsInitializedUsingInit {
+    MHSoftMutableDictionary *testObject = [[self.classUnderTest alloc] init];
+    testObject[@"A"] = strong1;
+    testObject[@"B"] = strong2;
+    
     XCTAssertEqual(testObject.count, 2u);
     MHSafeAssertEqualObjects(testObject[@"A"], strong1);
     MHSafeAssertEqualObjects(testObject[@"B"], strong2);
 }
 
 - (void)testWhenDictionaryIsInitWithObjectsThenTheyCanBeRetrieved {
-    MHSoftMutableDictionary *testObject = [MHSoftMutableDictionary dictionaryWithObject:strong1 forKey:@"A"];
+    MHSoftMutableDictionary *testObject = [self.classUnderTest dictionaryWithObject:strong1 forKey:@"A"];
     testObject[@"B"] = strong2;
 
     XCTAssertEqual(testObject.count, 2u);
@@ -73,7 +71,7 @@
 }
 
 - (void)testWhenObjectsAreRemovedOrAddedThenArrayReturnsCorrectResults {
-    MHSoftMutableDictionary *testObject = [MHSoftMutableDictionary dictionaryWithCapacity:3];
+    MHSoftMutableDictionary *testObject = [self.classUnderTest dictionaryWithCapacity:3];
     testObject[@"A"] = strong3;
     testObject[@"B"] = strong2;
     testObject[@"A"] = strong1;
@@ -87,7 +85,7 @@
 }
 
 - (void)testWhenObjectsAreAddedThenKeysetIsCorrect {
-    MHSoftMutableDictionary *testObject = [MHSoftMutableDictionary dictionary];
+    MHSoftMutableDictionary *testObject = [self.classUnderTest dictionary];
     testObject[@"A"] = strong3;
     testObject[@"B"] = strong2;
     testObject[@"A"] = strong1;
@@ -101,13 +99,13 @@
 }
 
 - (void)testWhenMemoryIsLowThenOnlyStrongReferencesAreRetainedInTheList {
-    MHSoftMutableDictionary *testObject = [MHSoftMutableDictionary dictionary];
+    MHSoftMutableDictionary *testObject = [self.classUnderTest dictionary];
     testObject[@"A"] = strong1;
     testObject[@"B"] = strong2;
     testObject[@"C"] = strong3;
     strong1 = nil;
     strong3 = nil;
-
+    
     XCTAssertEqual(testObject.count, 3u);
     MHSafeAssertEqualObjects(testObject[@"A"], weak1);
     MHSafeAssertEqualObjects(testObject[@"B"], weak2);
